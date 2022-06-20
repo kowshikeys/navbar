@@ -87,11 +87,61 @@ body.dark {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  background-color: var(--sec-color);
 }
 
 .header_two p {
   color: var(--icon);
+  cursor: pointer;
+}
+
+.header_two .new p {
+  position: relative;
+}
+
+.header_two .new .whats-new {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 1em;
+  line-height: 40px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.header_two .new .whats-new li {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .new .whats-new h3 {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .new p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.header_two .new p:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.header_two .new:hover .whats-new {
+  display: block;
 }
 
 .text {
