@@ -5,20 +5,21 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  --background:white;
-  --sec-color:grey;
-  --icon:black;
-  --text-backgroud:red;
+  --background: white;
+  --sec-color: grey;
+  --icon: black;
+  --text-backgroud: red;
 }
 
 body.dark {
-  --background:grey;
-  --sec-color:black;
-  --icon:white;
-  --text-backgroud:black;
+  --background: grey;
+  --sec-color: black;
+  --icon: white;
+  --text-backgroud: black;
 }
 
 .header {
@@ -45,6 +46,22 @@ body.dark {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+
+.header .header_left .dark-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
 }
 
 .header .header_center {
@@ -90,8 +107,12 @@ body.dark {
 }
 
 .header_two p {
-  color: var(--icon);
+  color: black;
   cursor: pointer;
+}
+
+.header_two .new {
+  padding: 5px;
 }
 
 .header_two .new p {
@@ -100,17 +121,15 @@ body.dark {
 
 .header_two .new .whats-new {
   position: absolute;
-  margin: auto;
   left: 0;
   width: 100%;
-  background-color: white;
   display: none;
   -webkit-transition: .3s;
   transition: .3s;
-  padding: 1em;
   line-height: 40px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  z-index: 100;
 }
 
 .header_two .new .whats-new li {
@@ -141,6 +160,102 @@ body.dark {
 }
 
 .header_two .new:hover .whats-new {
+  display: block;
+}
+
+.header_two .product p {
+  position: relative;
+}
+
+.header_two .product .product-new {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  line-height: 40px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 100;
+}
+
+.header_two .product .product-new li {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .product .product-new h3 {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .product p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.header_two .product p:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.header_two .product:hover .product-new {
+  display: block;
+}
+
+.header_two .value p {
+  position: relative;
+}
+
+.header_two .value .value-new {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  line-height: 40px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 100;
+}
+
+.header_two .value .value-new li {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .value .value-new h3 {
+  width: 80%;
+  margin: auto;
+}
+
+.header_two .value p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.header_two .value p:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.header_two .value:hover .value-new {
   display: block;
 }
 
